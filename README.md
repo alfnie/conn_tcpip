@@ -5,8 +5,9 @@ ASCII/binary transfer between two remote MATLAB hosts using TCP/IP protocol
 
   conn_tcpip manages TCP/IP client/server communication
  
-  commands:
-  
+_______________________________________________________________________
+_COMMANDS:_
+                                                   
     conn_tcpip('open','server' [,PORT, PUBLICKEY])   : open TCP/IP port in local machine and waits for client to connect (default PORT=6111 KEY='')
                                                       If no PORT is entered, conn_tcpip will first attempt port 6111 and if that fails it will
                                                       bind instead to the first available port. 
@@ -37,9 +38,10 @@ ASCII/binary transfer between two remote MATLAB hosts using TCP/IP protocol
     [publickey, privatekey] = conn_tcpip('keypair') : generates one-time-use public (used by server) & private (used by client) key pair
     publickey = conn_tcpip('keypair', privatekey)   : generates public key (used by server) from user-defined private key (used by client)
  
-  e.g.
- 
-    ON MACHINE #1 (server)
+_______________________________________________________________________
+_EXAMPLES:_
+
+ON MACHINE #1 (server)
  
       >> conn tcpip open server
       Opening port 6111...
@@ -55,17 +57,17 @@ ASCII/binary transfer between two remote MATLAB hosts using TCP/IP protocol
   
       *************************************************************************************************************
  
-    ON MACHINE #2 (client)
+ON MACHINE #2 (client)
  
       >> conn_tcpip open client alfonsosmbp2018.lan
       Connecting to alfonsosmbp2018.lan:6111...
       Succesfully established connection to server
  
-    ON MACHINE #1 or #2
+ON MACHINE #1 or #2
     
       >> conn_tcpip('write', rand(1,10));
  
-    ON MACHINE #2 or #1
+ON MACHINE #2 or #1
     
       >> disp(conn_tcpip('read'));
       0.3902    0.8448    0.3720    0.7076    0.3457    0.8772    0.7505    0.4344    0.4007    0.3729
@@ -75,6 +77,8 @@ SEE ALSO: CONN (www.conn-toolbox.org)
 
 _______________________________________________________________________
                                                    Copyright & licencing
+                                                   
+                                                   
 This software is distributed under the MIT/X Consortium License
 
 Copyright (c) 2009
