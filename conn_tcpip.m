@@ -37,7 +37,7 @@ function varargout = conn_tcpip(option, varargin)
 %
 %   ON MACHINE #1 (server)
 %
-%     >> conn tcpip open server
+%     >> conn_tcpip open server
 %     Opening port 6111...
 %     Waiting for client connection...
 %     *************************************************************************************************************
