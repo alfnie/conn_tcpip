@@ -43,7 +43,7 @@ _EXAMPLES:_
 
 ON MACHINE #1 (server)
  
-      >> conn tcpip open server
+      >> conn_tcpip open server
       Opening port 6111...
       Waiting for client connection...
       *************************************************************************************************************
